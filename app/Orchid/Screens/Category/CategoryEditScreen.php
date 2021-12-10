@@ -85,28 +85,6 @@ class CategoryEditScreen extends Screen
                     ->title(__('admin.category.slug'))
                     ->placeholder(__('admin.category.slug_placeholder')),
 
-                Select::make('category.icon')
-                    ->options([
-                        1 => 1,
-                        2 => 2,
-                        3 => 3,
-                        4 => 4,
-                        5 => 5,
-                        6 => 6,
-                        7 => 7,
-                        8 => 8,
-                        9 => 9,
-                        10 => 10,
-                        11 => 11,
-                        12 => 12,
-                    ])
-                    ->inlineAttributes(
-                        [
-                            'style' => 'display:none'
-                        ]
-                    )
-                    ->title(__('admin.category.icon'))
-                    ->help(__('admin.category.icon_help')),
 
                 Relation::make('category.parent_id')
                     ->title(__('admin.category.parent'))
@@ -116,7 +94,7 @@ class CategoryEditScreen extends Screen
                     ->title(__('admin.category.is_active'))
                     ->sendTrueOrFalse(),
 
-                Picture::make('category.image_id')
+                Picture::make('category.icon_id')
                     ->title(__('admin.category.image_id'))
                     ->targetId()
             ]),
